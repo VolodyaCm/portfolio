@@ -6,7 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "check-types": "tsc --pretty --noEmit",
+    "check-format": "prettier --check .",
+    "check-lint": "eslint . --ext ts --ext tsx --ext js",
+    "check-all": "npm run check-format && npm run check-lint && npm run check-types && npm run build",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "next": "12.1.0",
@@ -23,6 +28,8 @@
     "eslint-config-prettier": "^8.4.0",
     "eslint-import-resolver-typescript": "^2.5.0",
     "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.4",
     "prettier": "^2.5.1",
     "typescript": "4.5.5"
   }
