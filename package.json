@@ -11,7 +11,9 @@
     "check-format": "prettier --check .",
     "check-lint": "eslint . --ext ts --ext tsx --ext js",
     "check-all": "npm run check-format && npm run check-lint && npm run check-types && npm run build",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "format-styles": "stylelint **/*.scss --fix",
+    "check-lint-styles": "stylelint **/*.scss"
   },
   "dependencies": {
     "next": "12.1.0",
@@ -31,6 +33,11 @@
     "husky": "^7.0.4",
     "lint-staged": "^12.3.4",
     "prettier": "^2.5.1",
+    "sass": "^1.49.9",
+    "stylelint": "^14.5.3",
+    "stylelint-config-sass-guidelines": "^9.0.1",
+    "stylelint-prettier": "^2.0.0",
+    "stylelint-scss": "^4.1.0",
     "typescript": "4.5.5"
   }
 }
