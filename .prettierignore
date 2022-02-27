@@ -1,2 +1,3 @@
 # Disable scss formating
 *.scss
+/.next/

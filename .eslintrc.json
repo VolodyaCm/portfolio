@@ -10,5 +10,18 @@
   "rules": {
     "prettier/prettier": "error",
     "max-len": ["error", { "code": 80 }]
+  },
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["@", "./"],
+          ["@pages", "./pages"],
+          ["@components", "./components"],
+          ["@containers", "./containers"],
+          ["@styles", "./styles"]
+        ]
+      }
+    }
   }
 }
