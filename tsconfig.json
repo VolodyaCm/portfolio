@@ -17,10 +17,11 @@
     "baseUrl": ".",
     "paths": {
       "@": ["./*"],
-      "@pages/*": ["./pages/*"],
-      "@components/*": ["./components/*"],
-      "@containers/*": ["./containers/*"],
-      "@styles/*": ["./styles/*"]
+      "@/pages/*": ["./pages/*"],
+      "@/components/*": ["./components/*"],
+      "@/containers/*": ["./containers/*"],
+      "@/styles/*": ["./styles/*"],
+      "@/helpers/*": ["./helpers/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
