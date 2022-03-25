@@ -2,7 +2,7 @@ import { HTMLAttributes } from 'react';
 import Link from 'next/link';
 import cn from '@/helpers/classNames';
 
-interface ISocialLinkComponentProps extends HTMLAttributes<HTMLDivElement> {
+interface ISocialLinkComponentProps extends HTMLAttributes<HTMLAnchorElement> {
   iconName?: string;
   className?: string;
   href: string;
@@ -21,29 +21,29 @@ const SocialLinkComponent = ({
   ...props
 }: ISocialLinkComponentProps) => {
   return (
-    <div
-      className={cn([
-        className,
-        'bg-gray-200 w-min rounded-full',
-        'border-4 border-gray-100',
-        iconName ? 'p-3 md:p-4' : 'px-10 py-4',
-      ])}
-      {...props}
-    >
-      <Link href={href}>
-        <a>
-          {iconName ? (
-            <object
-              data={`/icons/${iconName}.svg`}
-              width={width}
-              height={height}
-            ></object>
-          ) : (
-            <span className="text-lg text-slate-50 leading-none">{text}</span>
-          )}
-        </a>
-      </Link>
-    </div>
+    <Link href={href}>
+      <a
+        target="_blank"
+        className={cn([
+          className,
+          ' bg-gray-200 w-min rounded-full',
+          'border-4 border-gray-100',
+          iconName ? 'p-3 md:p-4' : 'px-10 py-4',
+        ])}
+        {...props}
+      >
+        {iconName ? (
+          <object
+            style={{ pointerEvents: 'none' }}
+            data={`/icons/${iconName}.svg`}
+            width={width}
+            height={height}
+          ></object>
+        ) : (
+          <span className="text-lg text-slate-50 leading-none">{text}</span>
+        )}
+      </a>
+    </Link>
   );
 };
 
