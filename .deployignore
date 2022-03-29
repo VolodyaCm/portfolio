@@ -1,0 +1,8 @@
+node_modules
+.git
+.gitignore
+.deployignore
+ssl
+build
+deploy.js
+package-lock.json
