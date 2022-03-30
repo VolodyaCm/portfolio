@@ -2,10 +2,14 @@ import React from 'react';
 import Navigation from '@/containers/Navigation';
 import Image from 'next/image';
 import cn from '@/helpers/classNames';
-import Link from 'next/link';
 import SocialLinks from '@/containers/SocialLinks';
 
-const Header = () => {
+export interface IHeaderData {
+  title: string;
+  description: string;
+}
+
+const Header = ({ data }: { data: IHeaderData }) => {
   return (
     <div className="w-100 h-screen bg-gray-200">
       <header className="container">
@@ -58,19 +62,10 @@ const Header = () => {
                 'mb-4 sm:mb-7 md:my-7',
               ])}
             >
-              Hi! I&apos;m Volodymyr Smal-Stotskiy
+              {data.title}
             </h1>
             <p className="text-slate-50 text-sm sm:text-lg max-w-4xl">
-              a web developer with more than 3 years of experience in this
-              field. During my career I’ve worked with different technologies
-              and tools and built a strong set of{' '}
-              <Link href="/skills">
-                <a className="border-gray-50 border-b-2 hover:text-gray-50">
-                  skills
-                </a>
-              </Link>
-              . In my work I like to enjoy building everything starting from
-              small sites to rich interactive web apps.
+              {data.description}
             </p>
             <button
               className={cn([
