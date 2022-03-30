@@ -13,7 +13,7 @@ const SkillsContainer = ({ data }: ISkillsContainerProps) => {
     <div
       className={cn([
         'bg-gradient-to-r',
-        'from-[rgba(116,66,120,2%)] to-[rgba(0,212,255,4%)]',
+        'from-[rgba(116,66,120,2%)] to-[rgba(0,212,255,3%)]',
       ])}
     >
       <div className="container py-24">
@@ -40,7 +40,7 @@ const SkillsContainer = ({ data }: ISkillsContainerProps) => {
         </div>
         <div
           className={cn([
-            'w-100 mt-16 grid gap-y-10 justify-between',
+            'w-100 mt-16 grid gap-y-16 justify-between',
             'grid-cols-[repeat(auto-fill,minmax(100px,300px))]',
           ])}
         >
@@ -50,7 +50,7 @@ const SkillsContainer = ({ data }: ISkillsContainerProps) => {
             ) : null
           )}
         </div>
-        <div className="flex w-100 mt-10 gap-10 flex-wrap">
+        <div className="flex w-100 mt-16 gap-y-10 gap-x-16 flex-wrap">
           {data.map((item) =>
             item.list === 'other' ? (
               <TechItem key={item.name} item={item} small />

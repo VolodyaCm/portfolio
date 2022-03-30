@@ -20,7 +20,7 @@ const TechItemComponent = ({ item, small }: ITechItemProps) => {
         <div
           className={cn([
             'h-5 w-5 rounded-full',
-            'bg-gradient-to-r',
+            'bg-gradient-to-r mr-2',
             'from-[#819368] to-[#fdbb2d]',
           ])}
         ></div>
