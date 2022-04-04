@@ -1,15 +1,8 @@
 import React from 'react';
 import cn from '@/helpers/classNames';
-
-export interface ITechItem {
-  name: string;
-  list: string;
-  type: string;
-  exp: number;
-}
-
+import SkillItemType from '@/ptypes/skill';
 interface ITechItemProps {
-  item: ITechItem;
+  item: SkillItemType;
   small?: boolean;
 }
 

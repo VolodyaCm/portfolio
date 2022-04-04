@@ -21,7 +21,8 @@
           ["@/containers", "./containers"],
           ["@/styles", "./styles"],
           ["@/helpers", "./helpers"],
-          ["@/fireb", "./fireb"]
+          ["@/fireb", "./fireb"],
+          ["@/ptypes", "./ptypes"]
         ]
       }
     }

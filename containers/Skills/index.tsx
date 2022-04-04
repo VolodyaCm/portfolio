@@ -2,10 +2,10 @@ import React from 'react';
 import cn from '@/helpers/classNames';
 import TechItem from '@/components/TechItem';
 import Image from 'next/image';
-import { ITechItem } from '@/components/TechItem';
+import SkillItemType from '@/ptypes/skill';
 
 interface ISkillsContainerProps {
-  data: ITechItem[];
+  data: SkillItemType[];
 }
 
 const SkillsContainer = ({ data }: ISkillsContainerProps) => {

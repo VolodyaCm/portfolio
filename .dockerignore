@@ -3,7 +3,6 @@ Dockerfile
 .git
 .gitignore
 .dockerignore
-.env*
 ssl/
 build/
 yarn.lock

@@ -22,7 +22,8 @@
       "@/containers/*": ["./containers/*"],
       "@/styles/*": ["./styles/*"],
       "@/helpers/*": ["./helpers/*"],
-      "@/fireb/*": ["./fireb/*"]
+      "@/fireb/*": ["./fireb/*"],
+      "@/ptypes/*": ["./ptypes/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

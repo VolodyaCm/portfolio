@@ -2,17 +2,17 @@ import type { NextPage } from 'next';
 import Header from '@/containers/Header';
 import Skills from '@/containers/Skills';
 import WorkExperience from '@/containers/WorkExperience';
+import SkillItemType from '@/ptypes/skill';
 import { motion } from 'framer-motion';
 import { getMe } from '@/fireb/db/me';
 import { getSkills } from '@/fireb/db/skills';
 import { getExperience } from '@/fireb/db/experience';
 import { IHeaderData } from '@/containers/Header';
-import { ITechItem } from '@/components/TechItem';
 import { IProjectItem } from '@/components/ProjectItem';
 
 interface IHomePageProps {
   meData: IHeaderData;
-  skillsData: ITechItem[];
+  skillsData: SkillItemType[];
   experienceData: IProjectItem[];
 }
 

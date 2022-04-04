@@ -1,5 +1,5 @@
 import cn from '@/helpers/classNames';
-import { ITechItem } from '@/components/TechItem';
+import SkillItemType from '@/ptypes/skill';
 import TagComponent from '@/components/Tag';
 
 const cellCn = cn(['rounded bg-[rgba(80,80,87,40%)] p-7 text-slate-50']);
@@ -9,7 +9,7 @@ export interface IProjectItem {
   name: string;
   description: string;
   period: [string, string];
-  tech: ITechItem[];
+  tech: SkillItemType[];
 }
 
 interface ProjectItemProps {
